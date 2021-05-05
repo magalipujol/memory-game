@@ -8,3 +8,13 @@ body {
     height: 100vh;
     background: orangered;
 }
+
+.back-face {
+    height: 200px;
+    width: 140px;
+}
+
+.front-face {
+    height: 200px;
+    width: 140px;
+}
