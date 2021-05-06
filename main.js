@@ -15,20 +15,17 @@ function getRandomNumberUpToANumber(biggest) {
     return Math.floor(Math.random() * (biggest + 1))
 }
 
-//TODO the pair of cards should be different
-// maybe making an array with the unordered sources, and popping the ones I use
-// maybe creating an array with unique sources and using that
+function selectNElements (arr, n) {
+    while (arr.length > n) {
+            arr.splice(getRandomNumberUpToANumber(arr.length - 1), 1)
+        }
+    return arr
+    }
 
-let notDupArr = ["first", "second", "third", "fourth", "fifth", "sixth"]
-let dupArr = ["first-dup", "second-dup", "third-dup", "fourth-dup", "fifth-dup", "sixth-dup"]
+let arrOf6Cards = selectNElements(cardsArr, 6)
 
-notDupArr.forEach(
-x => document.getElementById(x).src = cardsArr[getRandomNumberUpToANumber(cardsArr.length - 1)]
-)
+arrOf6Cards.forEach(x => document.getElementsByClassName(".front-face").src = x)
 
-notDupArr.forEach( x =>
- document.getElementById(x + "-dup").src = document.getElementById(x).src 
-)
 
 //this selects all memory-card elments
 const cards = document.querySelectorAll('.memory-card');
