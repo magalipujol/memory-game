@@ -7,14 +7,59 @@
 body {
     height: 100vh;
     background: orangered;
+    display: flex;
 }
 
-.back-face {
-    height: 200px;
-    width: 140px;
+
+.memory-card {
+    width: calc(25% - 10px);
+    height: calc(33.333% - 10px);
+    margin: 5px;
+    position: relative;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+    /* this adds a way to change the card on click */
+    transform: scale(1);
+    /* this position the card in the 3D space created in the parent */
+    transform-style: preserve-3d;
+    transition: transform .5s;
+  }
+  
+/* this sizes down the card on click */
+  .memory-card:active {
+      transform: scale(0.97);
+      transition: transform .2s;
+  }
+
+/* this flip class rotates the card 180 degrees */
+  .memory-card.flip {
+      transform: rotateY(180deg);
+  }
+
+  .front-face,
+  .back-face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 3.5px;
+    /* this is needed to reveal the image under the back-part */
+    backface-visibility: hidden;
+  }
+
+  /* with this the front-part of the card is shown */
+  .front-face {
+      transform: rotateY(180deg);
+  }
+  
+
+.memory-game {
+    width: 640px;
+    height: 640px;
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    /* perspective sets how far in the z plane the object is from the viewer
+       the lower the value the bigger the perspective
+       is for 3D flip effect */
+    perspective: 1000px;
 }
 
-.front-face {
-    height: 200px;
-    width: 140px;
-}
