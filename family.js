@@ -1,15 +1,21 @@
-let cardsArr = ["img/vase-cat.png", 
-                "img/tiny-kitten.png", 
-                "img/charger-kitten.png",
-                "img/food-cat.png", 
-                "img/liquid-cat.png",
-                "img/loaf-cat.png",
-                "img/pizza-cat.png",
-                "img/president-cat.png",
-                "img/programmer-cat.png",
-                "img/stuffed-cat.png",
-                "img/toilet-cat.png",
-                "img/wine-cat.png"]
+let cardsArr = ["famIMG/1.png",
+                "famIMG/2.png",
+                "famIMG/3.png",
+                "famIMG/4.png",
+                "famIMG/5.png",
+                "famIMG/6.png",
+                "famIMG/7.png",
+                "famIMG/8.png",
+                "famIMG/9.png",
+                "famIMG/10.png",
+                "famIMG/11.png",
+                "famIMG/12.png",
+                "famIMG/14.png",
+                "famIMG/15.png",
+                "famIMG/16.png",
+                "famIMG/17.png",
+                "famIMG/18.png"
+]
 
 function getRandomNumberUpToANumber(biggest) {
     return Math.floor(Math.random() * (biggest + 1))
