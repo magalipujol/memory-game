@@ -13,8 +13,7 @@ let cardsArr = ["famIMG/1.png",
                 "famIMG/14.png",
                 "famIMG/15.png",
                 "famIMG/16.png",
-                "famIMG/17.png",
-                "famIMG/18.png"
+                "famIMG/17.png"
 ]
 
 function getRandomNumberUpToANumber(biggest) {
