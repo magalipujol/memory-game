@@ -8,6 +8,8 @@ body {
     height: 100vh;
     background: orangered;
     display: flex;
+    font-family: 'Yomogi', cursive;
+    text-transform: uppercase;
 }
 
 
@@ -93,4 +95,11 @@ li {
   float: left;
 }
 
-
+.title {
+  width: 640px;
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Yomogi', cursive;
+  background-color: #f3b2b6;
+  padding-left: 130px;
+}
